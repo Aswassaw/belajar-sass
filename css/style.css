@@ -1,0 +1,12 @@
+body {
+  background-color: #000;
+}
+
+.card__header {
+  padding: 10px;
+}
+
+.card__body {
+  color: red;
+}
+/*# sourceMappingURL=style.css.map */

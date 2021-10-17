@@ -1,0 +1,15 @@
+$background-color: #000;
+
+body {
+  background-color: $background-color;
+}
+
+.card {
+  &__header {
+    padding: 10px;
+  }
+
+  &__body {
+    color: red;
+  }
+}
