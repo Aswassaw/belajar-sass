@@ -1,0 +1,2 @@
+- Compile SASS file with command line.
+sass scss/style.scss build/css/style.css

@@ -36,7 +36,6 @@ $dark-text: #ddd;
 
 body {
   @include color-mode(true);
-  min-height: 1000px;
 }
 
 .link {
@@ -87,4 +86,53 @@ body {
 }
 
 // For
+.gradient-for {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 
+  @for $i from 1 to 11 {
+    li:nth-child(#{$i}) {
+      padding: 4px;
+      background-color: lighten(red, $i * 3%);
+    }
+  }
+}
+
+// While
+.gradient-while {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  $i: 1;
+  @while $i < 11 {
+    li:nth-child(#{$i}) {
+      padding: 4px;
+      background-color: lighten(blue, $i * 3%);
+    }
+
+    $i: $i + 1;
+  }
+}
+
+// Each
+$social-colors: (
+  "facebook": blue,
+  "instagram": purple,
+  "twitter": lightblue,
+  "telegram": skyblue,
+  "discord": green,
+);
+
+.socials {
+  font-size: 2em;
+  font-family: arial;
+  font-weight: bold;
+
+  @each $social, $color in $social-colors {
+    .#{$social} {
+      color: $color;
+    }
+  }
+}
