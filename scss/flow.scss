@@ -1,0 +1,90 @@
+// If
+@mixin profile-pic($size, $circle: false) {
+  width: $size;
+  height: $size;
+  border: 5px solid white;
+  box-shadow: 1px 1px 3px rgba(#000000, $alpha: 0.3);
+
+  @if $circle == true {
+    border-radius: 50%;
+  }
+}
+
+.square-profile {
+  @include profile-pic(200px, false);
+}
+
+.circle-profile {
+  @include profile-pic(80px, true);
+}
+
+// Else
+$light-bg: #eaeaea;
+$light-text: #333;
+$dark-bg: rgb(61, 61, 61);
+$dark-text: #ddd;
+
+@mixin color-mode($light-mode: true) {
+  @if ($light-mode == true) {
+    background-color: $light-bg;
+    color: $light-text;
+  } @else {
+    background-color: $dark-bg;
+    color: $dark-text;
+  }
+}
+
+body {
+  @include color-mode(true);
+  min-height: 1000px;
+}
+
+.link {
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  text-decoration: none;
+  background-color: blue;
+}
+
+// Else If
+@mixin triangle($size, $color, $direction) {
+  width: 0;
+  height: 0;
+  background-color: transparent;
+  border-color: transparent;
+  border-style: solid;
+  border-width: $size / 2;
+
+  @if $direction == top {
+    border-bottom-color: $color;
+  } @else if $direction == right {
+    border-left-color: black;
+  } @else if $direction == left {
+    border-right-color: black;
+  } @else {
+    border-top-color: black;
+  }
+}
+
+.triangle {
+  display: flex;
+  justify-content: space-around;
+
+  .top {
+    @include triangle(50px, black, top);
+  }
+  .right {
+    @include triangle(50px, black, right);
+  }
+  .bottom {
+    @include triangle(50px, black, bottom);
+  }
+  .left {
+    @include triangle(50px, black, left);
+  }
+}
+
+// For
+
