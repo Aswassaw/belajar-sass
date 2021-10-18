@@ -1,15 +1,36 @@
-$background-color: #000;
-
-body {
-  background-color: $background-color;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.card {
-  &__header {
-    padding: 10px;
+.main {
+  background-color: lightblue;
+  width: 50vw;
+  padding: 1em;
+  margin: 1em auto;
+  transition: 0.5s ease-in-out;
+  border-radius: 5px;
+
+  &-heading {
+    font-size: 1.5em;
+    margin-bottom: 15px;
   }
 
-  &__body {
-    color: red;
+  &-paragraph {
+    font-size: 1em;
+  }
+
+  // Pseudo class hover
+  &:hover {
+    background-color: lightcoral;
+  }
+}
+
+.main,
+.footer {
+  h1,
+  p {
+    letter-spacing: 1px;
   }
 }
