@@ -21,6 +21,32 @@ body {
   font-family: sans-serif;
 }
 
+.nav {
+  ul {
+    display: flex;
+    background-color: gainsboro;
+    padding: 10px;
+    
+    li {
+      list-style: none;
+      
+      a {
+        transition: .5s;
+        text-decoration: none;
+        font-size: 1.5rem;
+        margin: 10px;
+        color: black;
+
+        &:hover {
+          background-color: rgb(53, 53, 53);
+          color: white;
+          padding: 5px;
+        }
+      }
+    }
+  }
+}
+
 .container {
   height: 100%;
   display: flex;
