@@ -1,29 +1,89 @@
+// Global Variable
+$primary-color: rgb(94, 94, 255);
+$danger-color: rgb(250, 138, 123);
+
+// Map (Banyak variable/Array)
+$alert: (
+  "primary": blue,
+  "danger": red,
+  "success": green,
+);
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+html,
+body {
+  height: 100%;
+  font-family: sans-serif;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 .main {
-  background-color: lightblue;
-  width: 50vw;
-  padding: 1em;
-  margin: 1em auto;
-  transition: 0.5s ease-in-out;
-  border-radius: 5px;
+  // Local Variable
+  $post-background: rgb(128, 248, 128);
+  flex: 1;
+
+  .card {
+    background-color: $primary-color;
+    width: 50vw;
+    padding: 1em;
+    margin: 1em auto;
+    transition: 0.5s ease-in-out;
+    border-radius: 5px;
+    color: white;
+
+    &-heading {
+      font-size: 1.5em;
+      margin-bottom: 15px;
+    }
+
+    &-paragraph {
+      font-size: 1em;
+    }
+
+    // Pseudo class hover
+    &:hover {
+      background-color: $danger-color;
+      color: black;
+    }
+  }
+
+  .alert {
+    margin: 15px;
+    padding: 10px;
+    background-color: map-get($alert, "danger");
+  }
+
+  .post {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+
+    &-item {
+      padding: 10px;
+      margin: 5px;
+      background-color: $post-background;
+      width: 300px;
+    }
+  }
+}
+
+.footer {
+  background-color: rgba(194, 194, 194, 0.911);
+  padding: 10px;
 
   &-heading {
-    font-size: 1.5em;
-    margin-bottom: 15px;
-  }
-
-  &-paragraph {
-    font-size: 1em;
-  }
-
-  // Pseudo class hover
-  &:hover {
-    background-color: lightcoral;
+    font-size: 1.5rem;
   }
 }
 

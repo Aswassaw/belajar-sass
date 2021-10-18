@@ -4,23 +4,65 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  height: 100%;
+  font-family: sans-serif;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 .main {
-  background-color: lightblue;
+  flex: 1;
+}
+.main .card {
+  background-color: #5e5eff;
   width: 50vw;
   padding: 1em;
   margin: 1em auto;
   transition: 0.5s ease-in-out;
   border-radius: 5px;
+  color: white;
 }
-.main-heading {
+.main .card-heading {
   font-size: 1.5em;
   margin-bottom: 15px;
 }
-.main-paragraph {
+.main .card-paragraph {
   font-size: 1em;
 }
-.main:hover {
-  background-color: lightcoral;
+.main .card:hover {
+  background-color: #fa8a7b;
+  color: black;
+}
+.main .alert {
+  margin: 15px;
+  padding: 10px;
+  background-color: red;
+}
+.main .post {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+.main .post-item {
+  padding: 10px;
+  margin: 5px;
+  background-color: #80f880;
+  width: 300px;
+}
+
+.footer {
+  background-color: rgba(194, 194, 194, 0.911);
+  padding: 10px;
+}
+.footer-heading {
+  font-size: 1.5rem;
 }
 
 .main h1,
