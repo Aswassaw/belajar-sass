@@ -17,22 +17,6 @@
   color: white;
 }
 
-.footer ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.footer ul li {
-  display: inline-block;
-  padding: 10px;
-}
-.footer ul li a {
-  text-decoration: none;
-}
-.footer ul li {
-  background-color: pink;
-}
-
 .container {
   width: 600px;
   height: 400px;
@@ -51,3 +35,21 @@
   align-items: center;
   flex-direction: row;
 }
+
+.footer ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.footer ul li {
+  display: inline-block;
+  padding: 10px;
+}
+.footer ul li a {
+  text-decoration: none;
+}
+.footer ul li {
+  background-color: pink;
+}
+
+/*# sourceMappingURL=mixin_main.css.map */
