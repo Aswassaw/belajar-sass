@@ -1,0 +1,64 @@
+$primary-color: salmon;
+
+h1 {
+  color: $primary-color;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3em;
+  text-align: center;
+}
+
+// Build In Modules (Color)
+// adjust-color
+h1 {
+  color: adjust-color($color: $primary-color, $green: 55, $blue: -20, $red: 15);
+}
+
+// adjust-hue
+h1 {
+  color: adjust-hue($color: $primary-color, $degrees: 90);
+}
+
+// complement
+h1 {
+  color: complement($color: $primary-color);
+}
+
+// darken
+h1 {
+  color: darken($color: $primary-color, $amount: 20%);
+}
+
+// lighten
+h1 {
+  color: lighten($color: $primary-color, $amount: 10%);
+}
+
+// saturate
+h1 {
+  color: saturate($color: $primary-color, $amount: 30%);
+}
+
+// desaturate
+h1 {
+  color: desaturate($color: $primary-color, $amount: 70%);
+}
+
+// grayscale (desaturate 100%)
+h1 {
+  color: grayscale($color: $primary-color);
+}
+
+// mix
+h1 {
+  color: mix(red, blue, $weight: 45%);
+}
+
+// fade-in
+h1 {
+  color: fade-in($color: rgba(250, 128, 114, 0.1), $amount: 0.5);
+}
+
+// fade-out
+h1 {
+  color: fade-out($color: rgba(250, 128, 114, 0.9), $amount: 0.7);
+}
